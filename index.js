@@ -35,19 +35,23 @@ stream.on('tweet',
   }
 );
 var motivate = async function () {
+  console.log('trying to motivate someone');
   const res = await p({
-    'url': 'http://10.150.35.18/quotes.rest/search.json?category=inspire',
+    'url': 'http://quotes.rest/qod.json?category=inspire',
     'parse': 'json'
   })
   const quote = res.body.contents.quotes[0]
   var tweet = "\"" + quote.quote + "\"\r\n - " + quote.author;
+  // console.log("motivate with: ", tweet);
+  
   T.post('statuses/update', { status: tweet }, function (err, data, response) {
     console.log(data.text)
   });
 }
 
 var rule = new schedule.RecurrenceRule();
-rule.minute = 10;
+rule.hour = 10;
+rule.minute = 30;
 var j = schedule.scheduleJob(rule, function () {
   motivate();
 });
