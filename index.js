@@ -47,7 +47,7 @@ var motivate = async function () {
 }
 
 var rule = new schedule.RecurrenceRule();
-rule.minute = 0;
+rule.minute = 10;
 var j = schedule.scheduleJob(rule, function () {
   motivate();
 });
