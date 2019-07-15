@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "alc4bot",
+  "builds": [
+    { "src": "index.js", "use": "@now/node" },
+    { "src": "index.html", "use": "@now/static" }
+  ]
+}
