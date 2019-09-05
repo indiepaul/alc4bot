@@ -2,3 +2,7 @@ CONSUMER_KEY=xxxxxxxxxxxxxxxx
 CONSUMER_SECRET=xxxxxxxxxxxxxxxx
 ACCESS_TOKEN=xxxxxxxxxxxxxxxx
 ACCESS_TOKEN_SECRET=xxxxxxxxxxxxxxxx
+DB_CONN_STRING=xxxxxxxxxxxxxxxx
+HASHTAGS=#space #separated #hashtags
+MENTIONS=@space @separated @usernames
+USER_ID=1142546386187182088
