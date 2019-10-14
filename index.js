@@ -71,7 +71,7 @@ client.connect(function (err) {
   );
   var motivate = async function () {
     const res = await p({
-      'url': 'http://10.150.35.18/quotes.rest/qod.json?category=inspire',
+      'url': 'http://quotes.rest/qod.json?category=inspire',
       'parse': 'json'
     })
     if (res.body.error) {
